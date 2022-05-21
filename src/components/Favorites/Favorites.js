@@ -28,7 +28,7 @@ function Favorites() {
             <ul className="favorites__list">
                 {movies.map((item) => {
                     return <li className='favorites__list-item' key={item.Title}>{item.Title} ({item.Year})
-                        <button onClick={() => dispatch(removeFavorites(item))}>X</button>
+                        <button disabled={!change && "disabled"} onClick={() => dispatch(removeFavorites(item))}>X</button>
                     </li>;
                 })}
             </ul>
