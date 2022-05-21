@@ -12,7 +12,7 @@ function MovieItem(props) {
     const favs = useSelector((state) => state.favoriteData.favorites);
 
     function addToFavorites(){
-        fetch(`http://www.omdbapi.com/?apikey=3379adba&i=${imdbID}`)
+        fetch(`https://www.omdbapi.com/?apikey=3379adba&i=${imdbID}`)
         .then(res=>res.json())
         .then(data=> dispatch(addFavorites(data)))
     }
