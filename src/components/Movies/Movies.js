@@ -6,9 +6,9 @@ import {useSelector} from 'react-redux';
 
 function Movies() {
 
-    const movies = useSelector((state) => state.searchData.movies);
+    const movies = useSelector((state) => state.searchData.movies) || [];
 
-    const movieList = movies.map((movie) =>(
+    const movieList =  movies.map((movie) =>(
             <li className="movies__item" key={movie.imdbID}>
                 <MovieItem {...movie} />
             </li>

@@ -18,7 +18,12 @@ function SearchBox() {
         e.preventDefault();
         fetch(`http://www.omdbapi.com/?apikey=3379adba&s=${searchLine}`)
         .then(res=>res.json())
-        .then(data=>dispatch(fetchMovies(data.Search)))
+        .then(data=>{
+            if(data.Response === "False"){
+                alert("Movie Not Found!")
+            }
+            dispatch(fetchMovies(data.Search))
+        })
     }
 
 
