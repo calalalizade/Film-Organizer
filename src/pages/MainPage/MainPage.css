@@ -17,3 +17,29 @@
 .main-page__favorites {
     width: 35%;   
 }
+
+@media only screen and (max-width: 800px) {
+    .main-page__content {
+        padding: 42px calc(50% - 500px);
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+
+    .main-page__main-section{
+        margin: 0 auto;
+        padding-left: 0;
+        width: 50vw;
+    }
+
+    .search-box__form-input{
+        width: 20vw;
+    }
+
+    .main-page__favorites{
+        width: 80vw;
+        margin-bottom: 50px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}

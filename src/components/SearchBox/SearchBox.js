@@ -1,61 +1,50 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './SearchBox.css';
-import MovieItem from '../MovieItem/MovieItem';
-import Movies from '../Movies/Movies';
 
-class SearchBox extends Component {
-    state = {
-        searchLine: '',
-        movies: []
+import {useSelector , useDispatch} from 'react-redux';
+import {fetchMovies} from "../../stores/search"
+ 
+
+function SearchBox() {
+    const [searchLine , setSearchLine] = React.useState("")
+
+    const dispatch = useDispatch();
+
+    const searchLineChangeHandler = (e) => {
+        setSearchLine(prev => e.target.value)
     }
-    searchLineChangeHandler = (e) => {
-        this.setState({ searchLine: e.target.value });
-    }
-    searchBoxSubmitHandler = (e) => {
+
+    const searchBoxSubmitHandler = (e) => {
         e.preventDefault();
-        fetch(`http://www.omdbapi.com/?apikey=3379adba&s=${this.state.searchLine}`)
+        fetch(`http://www.omdbapi.com/?apikey=3379adba&s=${searchLine}`)
         .then(res=>res.json())
-        .then(data=>this.setState({movies: data.Search}))
+        .then(data=>dispatch(fetchMovies(data.Search)))
     }
 
-    
 
-    render() {
-        const { searchLine , movies } = this.state;
-
-        return (
-            <div className="search-box">
-                <form className="search-box__form" onSubmit={this.searchBoxSubmitHandler}>
-                    <label className="search-box__form-label">
-                        Искать фильм по названию:
-                        <input
-                            value={searchLine}
-                            type="text"
-                            className="search-box__form-input"
-                            placeholder="Например, Shawshank Redemption"
-                            onChange={this.searchLineChangeHandler}
-                        />
-                    </label>
-                    <button
-                        type="submit"
-                        className="search-box__form-submit"
-                        disabled={!searchLine}
-                    >
-                        Искать
-                    </button>
-                </form>
-                <div>
-                    {/* {movies.map((movie) => (
-                        <li className="movies__item" key={movie.imdbID}>
-                            <MovieItem {...movie} />
-                        </li>
-                    ))} */}
-
-                    <Movies />
-                </div>
-            </div>
-        );
-    }
+    return (
+        <div className="search-box">
+            <form className="search-box__form" onSubmit={searchBoxSubmitHandler}>
+                <label className="search-box__form-label">
+                    Искать фильм по названию:
+                    <input
+                        value={searchLine}
+                        type="text"
+                        className="search-box__form-input"
+                        placeholder="Например, Shawshank Redemption"
+                        onChange={searchLineChangeHandler}
+                    />
+                </label>
+                <button
+                    type="submit"
+                    className="search-box__form-submit"
+                    disabled={!searchLine}
+                >
+                    Искать
+                </button>
+            </form>
+        </div>
+    );
 }
  
 export default SearchBox;
