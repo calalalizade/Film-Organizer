@@ -26,7 +26,6 @@ function SearchBox() {
         })
     }
 
-
     return (
         <div className="search-box">
             <form className="search-box__form" onSubmit={searchBoxSubmitHandler}>

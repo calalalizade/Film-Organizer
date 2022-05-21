@@ -5,7 +5,7 @@ function Header() {
     return (
         <header className="header">
             <h1 className="header__title">
-                MustSee
+                MoviesElite
             </h1>
         </header>
     );
