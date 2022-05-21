@@ -10,7 +10,7 @@
 [![My Skills](https://skills.thijs.gg/icons?i=js,html,css,react,redux)](https://skills.thijs.gg)
 
 ### Preview:
-![image](![image](https://user-images.githubusercontent.com/60787777/169655880-10c22e0f-825e-4495-ba22-3055a9166ffc.png))
+![image](https://user-images.githubusercontent.com/60787777/169655880-10c22e0f-825e-4495-ba22-3055a9166ffc.png)
 
 ![image](https://user-images.githubusercontent.com/60787777/164488741-21c09913-acfa-4e16-864f-fc0ec834a4e9.png)
 ---
