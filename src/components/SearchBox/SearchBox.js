@@ -16,7 +16,7 @@ function SearchBox() {
 
     const searchBoxSubmitHandler = (e) => {
         e.preventDefault();
-        fetch(`http://www.omdbapi.com/?apikey=3379adba&s=${searchLine}`)
+        fetch(`https://www.omdbapi.com/?apikey=3379adba&s=${searchLine}`)
         .then(res=>res.json())
         .then(data=>{
             if(data.Response === "False"){
