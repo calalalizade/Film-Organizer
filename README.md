@@ -14,3 +14,5 @@
 
 ![image](https://user-images.githubusercontent.com/60787777/169655976-cf25ed69-496b-4099-a0ed-5dc9c126d532.png)
 ---
+
+Note: I didn't have time for css stuffs
