@@ -1,7 +1,7 @@
-# L-4 (Movie Orginizer) 🎥
+# L-4 (Movie Organizer) 🎥
 
 
-## 🔗🔗 Movie Orginizer: [Go To Site](https://movieselite.netlify.app/)
+## 🔗🔗 Movies Elite: [Go To Site](https://movieselite.netlify.app/)
 - The task is based on the fork project: [Repo Link](https://github.com/afon-himself/bootcamp-m4-starter)
 - API used in this project: [API Link](https://www.omdbapi.com/)
 ---
