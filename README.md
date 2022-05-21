@@ -2,8 +2,8 @@
 
 
 ## 🔗🔗 Movie Orginizer: [Go To Site](https://movieselite.netlify.app/)
-- Interface Layout: [Figma Link](https://www.figma.com/file/jprZt6p7xO6T7oj85woJyi/Converter-m4-part-time?node-id=59%3A0)
-- API used: [API Link](https://www.omdbapi.com/))
+- The task is based on the fork project: [Repo Link](https://github.com/afon-himself/bootcamp-m4-starter)
+- API used in this project: [API Link](https://www.omdbapi.com/)
 ---
 ## Built with 
  ![html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
