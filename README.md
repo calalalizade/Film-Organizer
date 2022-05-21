@@ -1,4 +1,4 @@
-# L-4 (Movie Orginizer) 🎥📽
+# L-4 (Movie Orginizer) 🎥
 
 
 ## 🔗🔗 Movie Orginizer: [Go To Site](https://movieselite.netlify.app/)
