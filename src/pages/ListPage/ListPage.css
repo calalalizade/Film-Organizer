@@ -26,9 +26,11 @@
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    background: rgb(231,231,231);
+    background: linear-gradient(90deg, rgba(231,231,231,0.5889706224286589) 33%, rgba(229,236,242,0) 100%);
 }
 
-ul li::before {
+.list-page ul li::before {
     content: "➡️";
     color: red; 
     font-weight: bold; 
