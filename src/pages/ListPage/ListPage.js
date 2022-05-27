@@ -15,7 +15,8 @@ function ListPage(props) {
                 {favs.map((item) => {
                     return (
                         <li key={item.imdbID}>
-                            <a href={`https://www.imdb.com/title/${item.imdbID}`} target="_blank">{item.Title} ({item.Year})</a>
+                            <img className="fav__poster" src={item.Poster} />
+                            <a className="underline" href={`https://www.imdb.com/title/${item.imdbID}`} target="_blank">{item.Title} ({item.Year})</a>
                         </li>
                     );
                 })}

@@ -1,12 +1,70 @@
 .list-page {
     padding: 42px calc(50% - 300px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .list-page__title {
     font-size: 34px;
     margin-bottom: 26px;
+    text-align: center;
+    color: #0074D9;
+    text-transform: uppercase;
+
+    background: rgb(244,244,244);
+    background: linear-gradient(90deg, rgba(244,244,244,0) 0%, rgba(0,116,217,1) 50%, rgba(244,244,244,0) 100%);
+    background-position: 0 100%;
+    background-size: 100% 2px;
+    background-repeat: repeat-x;
 }
+
 
 .list-page ul li {
     font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: "➡️";
+    color: red; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 2em; 
+    margin-left: -1em; 
+  }
+
+.fav__poster{
+    width: 100px;
+}
+
+.list-page a{
+  text-decoration: none;
+  color: #0074D9;
+}
+
+.underline{
+  position: relative;
+  margin-left: 70px;
+}
+
+.underline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0074D9;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
